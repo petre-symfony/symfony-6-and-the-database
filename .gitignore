@@ -7,7 +7,7 @@
 /public/bundles/
 /var/
 /vendor/
-/config/secrets/prod
+/config/secrets/prod/
 ###< symfony/framework-bundle ###
 
 ###> symfony/webpack-encore-bundle ###
