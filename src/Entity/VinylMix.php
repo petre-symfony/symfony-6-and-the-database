@@ -28,6 +28,9 @@ class VinylMix {
 	#[ORM\Column]
 	private ?\DateTimeImmutable $createdAt = null;
 
+	#[ORM\Column]
+	private int $votes = 0;
+
 	public function getId(): ?int {
 		return $this->id;
 	}
@@ -78,6 +81,16 @@ class VinylMix {
 
 	public function setCreatedAt(\DateTimeImmutable $createdAt): self {
 		$this->createdAt = $createdAt;
+
+		return $this;
+	}
+
+	public function getVotes(): ?int {
+		return $this->votes;
+	}
+
+	public function setVotes(int $votes): self {
+		$this->votes = $votes;
 
 		return $this;
 	}
