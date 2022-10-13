@@ -40,7 +40,6 @@ class VinylController extends AbstractController {
 
 		$mixRepository = $entityManager->getRepository(VinylMix::class);
 		$mixes = $mixRepository->findAll();
-		dd($mixes);
 
 		return $this->render('vinyl/browse.html.twig', [
 			'genre' => $genre,
