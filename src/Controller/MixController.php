@@ -28,4 +28,9 @@ class MixController extends AbstractController {
 			$mix->getTrackCount()
 		));
 	}
+
+	#[Route('/mix/{id}')]
+	public function show($id){
+		dd($id);
+	}
 }
