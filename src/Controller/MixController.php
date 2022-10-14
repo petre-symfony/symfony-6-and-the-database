@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\VinylMix;
+use App\Repository\VinylMixRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -30,7 +31,8 @@ class MixController extends AbstractController {
 	}
 
 	#[Route('/mix/{id}')]
-	public function show($id){
-		dd($id);
+	public function show($id, VinylMixRepository $mixRepository){
+		$mix = $mixRepository->find($id);
+		dd($mix);
 	}
 }
