@@ -34,6 +34,10 @@ class MixController extends AbstractController {
 	public function show($id, VinylMixRepository $mixRepository){
 		$mix = $mixRepository->find($id);
 
+		if (!$mix) {
+			throw $this->createNotFoundException('Mix Not Found');
+		}
+
 		return $this->render('mix/show.html.twig', [
 			'mix' => $mix
 		]);
