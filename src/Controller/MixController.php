@@ -3,10 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\VinylMix;
-use App\Repository\VinylMixRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -40,8 +39,8 @@ class MixController extends AbstractController {
 	}
 
 	#[Route('/mix/{id}/vote', name: 'app_mix_vote', methods: ['POST'])]
-	public function vote(VinylMix $mix, RequestStack $requestStack): Response {
-		$requestStack->getCurrentRequest();
+	public function vote(VinylMix $mix, Request $request): Response {
+
 		dd($mix);
 	}
 }
