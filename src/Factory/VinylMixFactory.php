@@ -45,9 +45,7 @@ final class VinylMixFactory extends ModelFactory {
 			'trackCount' => self::faker()->randomNumber(),
 			'genre' => self::faker()->text(),
 			'votes' => self::faker()->randomNumber(),
-			'slug' => self::faker()->text(),
-			'createdAt' => null, // TODO add DATETIME ORM type manually
-			'updatedAt' => null, // TODO add DATETIME ORM type manually
+			'slug' => self::faker()->text()
 		];
 	}
 
